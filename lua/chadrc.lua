@@ -1,5 +1,5 @@
 return {
-  base64 = {
+  base46 = {
     theme = 'doomchad',
   },
 }

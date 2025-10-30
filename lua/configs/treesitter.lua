@@ -5,6 +5,7 @@ end)
 
 return {
   ensure_installed = {
+    'ocaml',
     'cpp',
     'c',
     'clojure',

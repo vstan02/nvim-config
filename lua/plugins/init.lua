@@ -6,7 +6,6 @@ return {
       require('base46').load_all_highlights()
     end,
   },
-  { 'nvim-tree/nvim-web-devicons', lazy = true },
   {
     'nvchad/ui',
     lazy = false,
@@ -144,7 +143,7 @@ return {
     dependencies = { 'nvim-treesitter/nvim-treesitter' },
     cmd = 'Telescope',
     opts = function()
-      return require('nvchad.configs.telescope')
+      return require('configs.telescope')
     end,
   },
 }

@@ -12,6 +12,7 @@ local servers = {
   'ts_ls',
   'jdtls',
   'ocamllsp',
+  'lua_ls',
 }
 
 -- export on_attach & capabilities
@@ -90,20 +91,11 @@ M.defaults = function()
     },
   }
 
-  local lspconfig = require('lspconfig')
-
-  lspconfig['lua_ls'].setup({
-    capabilities = M.capabilities,
-    on_init = M.on_init,
-    settings = lua_lsp_settings,
-  })
+  vim.lsp.config('*', { capabilities = M.capabilities, on_init = M.on_init, on_attach = M.on_attach })
+  vim.lsp.config('lua_ls', { settings = lua_lsp_settings })
 
   for _, lsp in ipairs(servers) do
-    lspconfig[lsp].setup({
-      on_attach = M.on_attach,
-      on_init = M.on_init,
-      capabilities = M.capabilities,
-    })
+    vim.lsp.enable(lsp)
   end
 end
 
