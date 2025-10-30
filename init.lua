@@ -1,3 +1,5 @@
+require('options')
+
 vim.g.base46_cache = vim.fn.stdpath('data') .. '/base46_cache/'
 vim.g.mapleader = ' '
 
@@ -9,8 +11,6 @@ if not vim.loop.fs_stat(lazypath) then
 end
 
 vim.opt.rtp:prepend(lazypath)
-
-require('options')
 
 local lazycfg = require('configs.lazy')
 require('lazy').setup({ { import = 'plugins' } }, lazycfg)

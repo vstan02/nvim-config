@@ -30,6 +30,9 @@ vim.o.updatetime = 250
 -- when cursor reaches end/beginning of line
 vim.opt.whichwrap:append('<>[]hl')
 
+vim.opt.splitbelow = true
+vim.opt.splitright = true
+
 -- disable some default providers
 vim.g.loaded_node_provider = 0
 vim.g.loaded_python3_provider = 0
