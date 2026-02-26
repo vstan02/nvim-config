@@ -22,16 +22,9 @@ return {
     'folke/snacks.nvim',
     opts = {
       picker = {
-        hidden = true, -- show dotfiles
-        ignored = true, -- show .gitignored files
+        hidden = true,
+        ignored = true,
         follow = true,
-        sources = {
-          files = {
-            hidden = true, -- show dotfiles
-            ignored = true, -- show .gitignored files
-            follow = true, -- follow symlinks (optional)
-          },
-        },
       },
     },
   },

@@ -2,9 +2,7 @@ return {
   {
     'neovim/nvim-lspconfig',
     opts = {
-      opts = {
-        kotlin_language_server = {},
-      },
+      kotlin_language_server = {},
     },
   },
   {
