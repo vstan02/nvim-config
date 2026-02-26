@@ -2,15 +2,13 @@ return {
   {
     'neovim/nvim-lspconfig',
     opts = {
-      opts = {
-        servers = {
-          jdtls = {},
-        },
-        setup = {
-          jdtls = function()
-            return true -- avoid duplicate servers
-          end,
-        },
+      servers = {
+        jdtls = {},
+      },
+      setup = {
+        jdtls = function()
+          return true -- avoid duplicate servers
+        end,
       },
     },
   },
