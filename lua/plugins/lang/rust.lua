@@ -3,10 +3,7 @@ return {
     'nvim-treesitter/nvim-treesitter',
     opts = {
       ensure_installed = {
-        'bash',
-        'lua',
-        'markdown',
-        'markdown_inline',
+        'rust',
       },
     },
   },
@@ -14,18 +11,14 @@ return {
     'mason-org/mason.nvim',
     opts = {
       ensure_installed = {
-        'stylua',
+        'bacon-ls',
       },
     },
   },
   {
-    'folke/snacks.nvim',
+    'neovim/nvim-lspconfig',
     opts = {
-      picker = {
-        hidden = true,
-        ignored = true,
-        follow = true,
-      },
+      bacon_ls = {},
     },
   },
 }

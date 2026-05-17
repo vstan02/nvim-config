@@ -31,6 +31,9 @@ return {
       ensure_installed = {
         'ocaml',
       },
+      indent = {
+        disable = { 'ocaml' },
+      },
     },
   },
   {
